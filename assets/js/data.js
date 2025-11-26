@@ -9,7 +9,7 @@ export const products = [
         category: "guitarras",
         rating: 4.9,
         stock: 3,
-        img: "assets/img/products/fender_stratocaster_1965.png",
+        img: "assets/img/products/fender_stratocaster_1965.webp",
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const products = [
         category: "guitarras",
         rating: 5.0,
         stock: 2,
-        img: "assets/img/products/gibson_les_paul_standard_1959.png",
+        img: "assets/img/products/gibson_les_paul_standard_1959.webp",
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ export const products = [
         category: "guitarras",
         rating: 4.7,
         stock: 5,
-        img: "assets/img/products/fender_telecaster_1972_custom.png",
+        img: "assets/img/products/fender_telecaster_1972_custom.webp",
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ export const products = [
         category: "guitarras",
         rating: 4.6,
         stock: 4,
-        img: "assets/img/products/gibson_sg_special_1968.png",
+        img: "assets/img/products/gibson_sg_special_1968.webp",
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ export const products = [
         category: "guitarras",
         rating: 4.8,
         stock: 3,
-        img: "assets/img/products/fender_jazzmaster_1962.png",
+        img: "assets/img/products/fender_jazzmaster_1962.webp",
     },
     {
         id: 6,
@@ -69,7 +69,7 @@ export const products = [
         category: "guitarras",
         rating: 4.9,
         stock: 2,
-        img: "assets/img/products/gibson_es-335_1961.png",
+        img: "assets/img/products/gibson_es-335_1961.webp",
     },
     {
         id: 7,
@@ -81,7 +81,7 @@ export const products = [
         category: "guitarras",
         rating: 4.5,
         stock: 6,
-        img: "assets/img/products/fender_mustang_1964.png",
+        img: "assets/img/products/fender_mustang_1964.webp",
     },
     {
         id: 8,
@@ -93,7 +93,7 @@ export const products = [
         category: "guitarras",
         rating: 4.8,
         stock: 3,
-        img: "assets/img/products/gibson_firebird_v_1963.png",
+        img: "assets/img/products/gibson_firebird_v_1963.webp",
     },
     {
         id: 9,
@@ -105,7 +105,7 @@ export const products = [
         category: "guitarras",
         rating: 4.6,
         stock: 4,
-        img: "assets/img/products/fender_jaguar_1965.png",
+        img: "assets/img/products/fender_jaguar_1965.webp",
     },
     {
         id: 10,
@@ -117,6 +117,6 @@ export const products = [
         category: "guitarras",
         rating: 4.7,
         stock: 3,
-        img: "assets/img/products/gibson_explorer_1976.png",
+        img: "assets/img/products/gibson_explorer_1976.webp",
     },
 ];
