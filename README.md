@@ -10,19 +10,39 @@ La implementación muestra una manera correcta y completa de cumplir todos los r
 La solución se organiza en una estructura simple y clara:
 
 ```bash
-/ecommerce-frontend-m2
-│
-├── index.html # Página Home (listado de productos)
-├── product.html # Página de detalle del producto
-├── cart.html # Página del carrito simulado
-│
-├── /assets
- ├── /img # Imágenes de productos
- └── /css # Estilos adicionales (opcional)
-  │
-  └── /js
-    ├── data.js # Arreglo de productos
-    └── app.js # Lógica del carrito y eventos
+ecommerce-frontend-m2
+├── assets
+│   ├── css
+│   │   └── style.css
+│   ├── img
+│   │   ├── products
+│   │   │   ├── fender_jaguar_1965.png
+│   │   │   ├── fender_jazzmaster_1962.png
+│   │   │   ├── fender_mustang_1964.png
+│   │   │   ├── fender_stratocaster_1965.png
+│   │   │   ├── fender_telecaster_1972_custom.png
+│   │   │   ├── gibson_es-335_1961.png
+│   │   │   ├── gibson_explorer_1976.png
+│   │   │   ├── gibson_firebird_v_1963.png
+│   │   │   ├── gibson_les_paul_standard_1959.png
+│   │   │   └── gibson_sg_special_1968.png
+│   │   └── ui
+│   │       ├── img_01.jpg
+│   │       ├── img_02.jpg
+│   │       └── img_03.jpg
+│   └── js
+│       ├── best-sellers.js
+│       ├── data.js
+│       ├── footer.js
+│       ├── navbar.js
+│       └── products.js
+├── cart.html
+├── details.html
+├── footer.html
+├── index.html
+├── navbar.html
+├── products.html
+└── README.md
 ```
 
 ---
