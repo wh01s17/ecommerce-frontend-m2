@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tarras de Pana - Productos</title>
+        <title>Productos</title>
 
         <!-- Bootstrap -->
         <link
@@ -27,8 +27,38 @@
         <div id="navbar"></div>
 
         <main>
-            <section id="products" class="container border">
-                <div class="row" id="cards-row"></div>
+            <section
+                id="filter"
+                class="container mb-3 d-flex align-items-end border rounded py-2"
+            >
+                <div>
+                    <label for="product-filter" class="ps-2 form-label"
+                        >Ordenar por</label
+                    >
+                    <select id="product-filter" class="form-select w-auto">
+                        <option value="">Por defecto</option>
+                        <option value="az">Nombre: A a Z</option>
+                        <option value="za">Nombre: Z a A</option>
+                        <option value="price-low">Precio: menor a mayor</option>
+                        <option value="price-high">
+                            Precio: mayor a menor
+                        </option>
+                        <option value="top-rated">Mejor valorados</option>
+                    </select>
+                </div>
+
+                <div id="search" class="ms-auto">
+                    <input
+                        type="text"
+                        id="search-input"
+                        class="form-control"
+                        placeholder="Buscar producto..."
+                    />
+                </div>
+            </section>
+
+            <section id="products" class="container">
+                <div id="cards-row" class="row"></div>
             </section>
         </main>
 
