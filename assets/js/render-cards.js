@@ -1,7 +1,30 @@
-// render-cards.js
+import { updateCartCount } from "./cart.js";
+
+export function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function addToCart(product) {
+    const cart = getCart();
+
+    const index = cart.findIndex((item) => item.id === product.id);
+
+    if (index !== -1) {
+        cart[index].qty += 1;
+    } else {
+        cart.push({ ...product, qty: 1 });
+    }
+
+    saveCart(cart);
+    console.log("Carrito actualizado:", cart);
+}
+
 export function renderCards(products, targetSelector) {
     const container = document.querySelector(targetSelector);
-
     if (!container) return;
 
     container.innerHTML = products
@@ -14,10 +37,9 @@ export function renderCards(products, targetSelector) {
                     class="card-img-top" 
                     alt="${p.name}"
                 />
+
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">
-                        ${p.name}
-                    </h5>
+                    <h5 class="card-title">${p.name}</h5>
 
                     <p class="card-text small text-muted flex-grow-1">
                         ${p.description}
@@ -31,6 +53,13 @@ export function renderCards(products, targetSelector) {
                         ⭐ ${p.rating}
                     </span>
 
+                    <button 
+                        class="btn btn-success w-100 mb-2 add-to-cart" 
+                        data-id="${p.id}"
+                    >
+                        Agregar al carrito
+                    </button>
+
                     <a href="#" class="btn btn-primary mt-auto">Ver más</a>
                 </div>
             </div>
@@ -38,4 +67,15 @@ export function renderCards(products, targetSelector) {
     `
         )
         .join("");
+
+    const buttons = container.querySelectorAll(".add-to-cart");
+
+    buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const id = btn.dataset.id;
+            const product = products.find((p) => p.id == id);
+            if (product) addToCart(product);
+            updateCartCount();
+        });
+    });
 }

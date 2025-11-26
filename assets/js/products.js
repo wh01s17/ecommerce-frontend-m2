@@ -30,8 +30,8 @@ function getSearchValue() {
     return document.getElementById("search-input").value;
 }
 
-function sortProducts(array, filter) {
-    const list = [...array];
+function sortProducts(products, filter) {
+    const list = [...products];
 
     switch (filter) {
         case "az":
