@@ -12,3 +12,7 @@ body {
     object-fit: contain;
     background: #000; /* opcional para relleno */
 }
+
+#products {
+    padding-top: 100px;
+}

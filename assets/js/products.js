@@ -1,8 +1,8 @@
 import { products } from "./data.js";
 
-const top4 = products.toSorted((a, b) => b.rating - a.rating).slice(0, 4);
+const tarras = products.toSorted((a, b) => b.rating - a.rating);
 
-document.getElementById("cards-row").innerHTML = top4
+document.getElementById("cards-row").innerHTML = tarras
     .map(
         (p) => `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
