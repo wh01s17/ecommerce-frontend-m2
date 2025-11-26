@@ -1,0 +1,14 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.carousel-item {
+    height: 800px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background: #000; /* opcional para relleno */
+}
