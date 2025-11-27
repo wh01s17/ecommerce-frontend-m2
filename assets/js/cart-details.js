@@ -39,7 +39,7 @@ g                    Tu carrito está vacío.
                 ${cartItems
                     .map(
                         (item) => `
-                    <div class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
+                    <div class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light border-0 mb-2 shadow rounded">
                         <div class="d-flex align-items-center gap-3">
                             <a href="/details.html?id=${item.id}">
                                 <img 
@@ -50,7 +50,9 @@ g                    Tu carrito está vacío.
                             </a>
                             
                             <div>
-                                <a href="/details.html?id=${item.id}">
+                                <a href="/details.html?id=${
+                                    item.id
+                                }" class="text-light text-decoration-none">
                                     <h5 class="mb-1">
                                         ${item.name}
                                     </h5>
@@ -62,9 +64,10 @@ g                    Tu carrito está vacío.
                                 )}
                                 </p>
                                 <div class="d-flex align-items-center gap-2 mt-2">
-                                    <button class="btn btn-sm btn-outline-secondary" onclick="decreaseQuantity(${
-                                        item.id
-                                    })">
+                                    <button 
+                                        class="btn btn-sm btn-outline-secondary" 
+                                        onclick="decreaseQuantity(${item.id})"
+                                    >
                                         <i class="fa-solid fa-minus"></i>
                                     </button>
                                     <span class="fw-bold">
