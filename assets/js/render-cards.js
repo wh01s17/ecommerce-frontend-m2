@@ -20,7 +20,7 @@ function addToCart(product) {
     }
 
     saveCart(cart);
-    console.log("Carrito actualizado:", cart);
+    alert("Producto agregado al carrito");
 }
 
 export function renderCards(products, targetSelector) {
@@ -60,7 +60,9 @@ export function renderCards(products, targetSelector) {
                         Agregar al carrito
                     </button>
 
-                    <a href="#" class="btn btn-primary mt-auto">Ver más</a>
+                    <a href="/details.html?id=${p.id}" class="btn btn-primary">
+                        Ver detalle
+                    </a>
                 </div>
             </div>
         </div>

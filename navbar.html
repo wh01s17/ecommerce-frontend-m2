@@ -1,8 +1,10 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top py-3 px-2">
     <div class="container-fluid">
         <a class="navbar-brand" href="/#">
-            Tarras de Pana
-            <i class="fa-solid fa-guitar"></i>
+            <h3>
+                Tarras de Pana
+                <i class="fa-solid fa-guitar"></i>
+            </h3>
         </a>
         <button
             class="navbar-toggler"
@@ -34,16 +36,21 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link position-relative" href="/cart.html">
-                        <i class="fa-solid fa-cart-shopping fa-lg"></i>
-
-                        <span
-                            id="cart-count"
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                            style="font-size: 0.7rem"
+                    <a class="nav-link" href="/cart.html">
+                        <div
+                            class="position-relative d-inline-block"
+                            style="width: 24px"
                         >
-                            0
-                        </span>
+                            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+
+                            <span
+                                id="cart-count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                style="font-size: 0.7rem"
+                            >
+                                0
+                            </span>
+                        </div>
                     </a>
                 </li>
             </ul>

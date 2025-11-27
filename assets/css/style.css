@@ -25,3 +25,13 @@ body {
 #search {
     max-width: 250px;
 }
+
+#details {
+    margin-top: 200px;
+    min-height: 100dvh;
+}
+
+#product-details img {
+    max-height: 850px;
+    object-fit: cover;
+}
