@@ -54,10 +54,10 @@ ecommerce-frontend-m2
 
 ### HTML5
 
--   Uso de `header`, `nav`, `main`, `section`, `article`, `footer`.
+-   Uso de `header`, `nav`, `main`, `section`, `footer`.
 -   Separación clara de contenido y estructura.
 
-### Bootstrap (v5.x vía CDN)
+### Bootstrap (v5.3.8 vía CDN)
 
 -   Componentes usados: **navbar**, **card**, **button**, **badge**.
 -   Grid responsivo para Home y páginas internas.
@@ -70,7 +70,7 @@ ecommerce-frontend-m2
     -   Renderizado de productos.
     -   Actualización del contador del carrito.
     -   Navegación entre páginas.
--   Simulación del carrito usando **localStorage** (opcional pero recomendado).
+-   Simulación del carrito usando **localStorage**.
 
 ### Git / GitHub
 
@@ -156,12 +156,9 @@ https://github.com/wh01s17/ecommerce-frontend-m2
 
 ---
 
-## 6. Observaciones pedagógicas
+## 6. Enlace a GitHub Pages
 
--   Esta solución muestra **una forma correcta**, pero **no la única**, de resolver el proyecto.
--   Se privilegia la claridad del código por sobre la complejidad.
--   La separación de `data.js` y `app.js` es intencional para favorecer buenas prácticas.
--   La solución evita frameworks para enfocarse en los fundamentos del módulo.
+https://wh01s17.github.io/ecommerce-frontend-m2/
 
 ---
 

@@ -57,6 +57,7 @@ export function renderCards(products, targetSelector) {
                         class="btn btn-success w-100 mb-2 add-to-cart" 
                         data-id="${p.id}"
                     >
+                    <i class="fa-solid fa-cart-plus"></i>
                         Agregar al carrito
                     </button>
 
