@@ -21,7 +21,7 @@ export function renderCards(products, targetSelector) {
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${p.name}</h5>
 
-                    <p class="card-text small flex-grow-1">
+                    <p class="card-text small flex-grow-1 truncate-2">
                         ${p.description}
                     </p>
 
