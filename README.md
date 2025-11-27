@@ -16,26 +16,29 @@ ecommerce-frontend-m2
 │   │   └── style.css
 │   ├── img
 │   │   ├── products
-│   │   │   ├── fender_jaguar_1965.png
-│   │   │   ├── fender_jazzmaster_1962.png
-│   │   │   ├── fender_mustang_1964.png
-│   │   │   ├── fender_stratocaster_1965.png
-│   │   │   ├── fender_telecaster_1972_custom.png
-│   │   │   ├── gibson_es-335_1961.png
-│   │   │   ├── gibson_explorer_1976.png
-│   │   │   ├── gibson_firebird_v_1963.png
-│   │   │   ├── gibson_les_paul_standard_1959.png
-│   │   │   └── gibson_sg_special_1968.png
+│   │   │   ├── fender_jaguar_1965.webp
+│   │   │   ├── fender_jazzmaster_1962.webp
+│   │   │   ├── fender_mustang_1964.webp
+│   │   │   ├── fender_stratocaster_1965.webp
+│   │   │   ├── fender_telecaster_1972_custom.webp
+│   │   │   ├── gibson_es-335_1961.webp
+│   │   │   ├── gibson_explorer_1976.webp
+│   │   │   ├── gibson_firebird_v_1963.webp
+│   │   │   ├── gibson_les_paul_standard_1959.webp
+│   │   │   └── gibson_sg_special_1968.webp
 │   │   └── ui
-│   │       ├── img_01.jpg
-│   │       ├── img_02.jpg
-│   │       └── img_03.jpg
+│   │       ├── img_01.webp
+│   │       ├── img_02.webp
+│   │       └── img_03.webp
 │   └── js
 │       ├── best-sellers.js
+│       ├── cart.js
 │       ├── data.js
+│       ├── details.js
 │       ├── footer.js
 │       ├── navbar.js
-│       └── products.js
+│       ├── products.js
+│       └── render-cards.js
 ├── cart.html
 ├── details.html
 ├── footer.html

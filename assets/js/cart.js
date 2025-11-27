@@ -6,5 +6,4 @@ export function updateCartCount() {
     if (badge) badge.textContent = totalItems;
 }
 
-// Llamar al cargar la página
 updateCartCount();

@@ -49,7 +49,7 @@ export function renderCards(products, targetSelector) {
                         $${p.price.toLocaleString("es-CL")}
                     </p>
 
-                    <span class="badge bg-warning text-dark mb-3">
+                    <span class="badge text-start text-dark mb-3">
                         ⭐ ${p.rating}
                     </span>
 

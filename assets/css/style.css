@@ -10,7 +10,7 @@ body {
     height: 100%;
     width: 100%;
     object-fit: contain;
-    background: #000; /* opcional para relleno */
+    background: #000;
 }
 
 #filter {
@@ -34,4 +34,16 @@ body {
 #product-details img {
     max-height: 850px;
     object-fit: cover;
+}
+
+#cart-count {
+    font-size: 0.7rem;
+}
+
+#cart-icon {
+    width: 24px;
+}
+
+#wh01s17-link {
+    text-decoration: none;
 }
