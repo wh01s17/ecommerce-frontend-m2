@@ -14,14 +14,11 @@ function renderCart() {
 
     if (cartItems.length === 0) {
         container.innerHTML = `
-            <div id="cart-empty" class="container d-flex align-items-center justify-content-center">
-g                    Tu carrito está vacío.
-                    <br />
-                    <br />
-                    <a href="/products.html" class="btn btn-primary">
-                        Ir a productos
-                    </a>
-                </div>
+            <div id="cart-empty" class="container d-flex flex-column align-items-center justify-content-center text-center">
+                <h3 class="mb-3">Tu carrito está vacío.</h3>
+                <a href="/products.html" class="btn btn-primary">
+                    Ir a productos
+                </a>
             </div>
         `;
         return;
