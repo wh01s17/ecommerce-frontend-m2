@@ -18,6 +18,7 @@ function renderCart() {
                 <h3 class="mb-3">Tu carrito está vacío.</h3>
                 <a href="/products.html" class="btn btn-primary">
                     Ir a productos
+                    <i class="fa-solid fa-store"></i>
                 </a>
             </div>
         `;

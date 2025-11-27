@@ -89,3 +89,28 @@ body {
         background-position: 0% 50%;
     }
 }
+
+.swing-soft-animation {
+    animation: swing-soft 1s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.swing-soft-animation-inline {
+    animation: swing-soft 1s ease-in-out infinite;
+    transform-origin: bottom center;
+    display: inline-block;
+}
+
+@keyframes swing-soft {
+    0% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: rotate(-1deg);
+    }
+}

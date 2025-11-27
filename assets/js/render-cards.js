@@ -36,6 +36,8 @@ export function renderCards(products, targetSelector) {
                     <button 
                         class="btn btn-primary w-100 mb-2 add-to-cart" 
                         data-id="${p.id}"
+                        data-bs-toggle="tooltip" data-bs-placement="top"
+                        data-bs-title="Esta guitarra te llama ;D"
                     >
                     <i class="fa-solid fa-cart-plus"></i>
                         Agregar al carrito
@@ -52,6 +54,13 @@ export function renderCards(products, targetSelector) {
     `
         )
         .join("");
+
+    const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+    );
+    const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+    );
 
     const buttons = container.querySelectorAll(".add-to-cart");
 
