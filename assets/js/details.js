@@ -1,27 +1,10 @@
 import { products } from "./data.js";
-import { updateCartCount } from "./cart.js";
+import { addToCart } from "./cart.js";
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 const product = products.find((p) => p.id == id);
-
-function addToCart(productId) {
-    const cart = JSON.parse(localStorage.getItem("cart")) ?? [];
-
-    const existing = cart.find((item) => item.id === productId);
-
-    if (existing) {
-        existing.qty += 1;
-    } else {
-        cart.push({ id: productId, qty: 1 });
-    }
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    alert("Producto agregado al carrito");
-    updateCartCount();
-}
 
 if (!product) {
     document.getElementById(
@@ -49,7 +32,7 @@ if (!product) {
 
                 <button 
                     class="btn btn-primary btn-lg w-100 mb-3"
-                    onclick="addToCart(${product.id})"
+                    onclick="addToCart(${product})"
                 >
                     <i class="fa-solid fa-cart-plus"></i>
                     Agregar al carrito

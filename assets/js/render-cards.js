@@ -1,27 +1,4 @@
-import { updateCartCount } from "./cart.js";
-
-export function getCart() {
-    return JSON.parse(localStorage.getItem("cart")) || [];
-}
-
-function saveCart(cart) {
-    localStorage.setItem("cart", JSON.stringify(cart));
-}
-
-function addToCart(product) {
-    const cart = getCart();
-
-    const index = cart.findIndex((item) => item.id === product.id);
-
-    if (index !== -1) {
-        cart[index].qty += 1;
-    } else {
-        cart.push({ ...product, qty: 1 });
-    }
-
-    saveCart(cart);
-    alert("Producto agregado al carrito");
-}
+import { addToCart } from "./cart.js";
 
 export function renderCards(products, targetSelector) {
     const container = document.querySelector(targetSelector);
@@ -32,11 +9,14 @@ export function renderCards(products, targetSelector) {
             (p) => `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
             <div id="card" class="card h-100 shadow-sm border-0">
-                <img 
-                    src="${p.img}" 
-                    class="card-img-top" 
-                    alt="${p.name}"
-                />
+                <a href="/details.html?id=${p.id}">
+                    <img 
+                        src="${p.img}" 
+                        class="card-img-top" 
+                        alt="${p.name}"
+                    />
+                </a>
+                
 
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${p.name}</h5>
@@ -78,7 +58,6 @@ export function renderCards(products, targetSelector) {
             const id = btn.dataset.id;
             const product = products.find((p) => p.id == id);
             if (product) addToCart(product);
-            updateCartCount();
         });
     });
 }
