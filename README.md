@@ -46,13 +46,13 @@ ecommerce-frontend-m2
 │       ├── cart-details.js
 │       ├── cart.js
 │       ├── data.js
-│       ├── details.js
+│       ├── product-details.js
 │       ├── footer.js
 │       ├── navbar.js
 │       ├── products.js
 │       └── render-cards.js
 ├── cart.html
-├── details.html
+├── product-details.html
 ├── footer.html
 ├── index.html
 ├── navbar.html

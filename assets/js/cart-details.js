@@ -40,7 +40,7 @@ function renderCart() {
                         (item) => `
                     <div class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light border-0 mb-2 shadow rounded">
                         <div class="d-flex align-items-center gap-3">
-                            <a href="/details.html?id=${item.id}">
+                            <a href="/product-details.html?id=${item.id}">
                                 <img 
                                     src="${item.img}" 
                                     alt="${item.name}" 
@@ -49,7 +49,7 @@ function renderCart() {
                             </a>
                             
                             <div>
-                                <a href="/details.html?id=${
+                                <a href="/product-details.html?id=${
                                     item.id
                                 }" class="text-light text-decoration-none">
                                     <h5 class="mb-1">

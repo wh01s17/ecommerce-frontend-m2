@@ -9,7 +9,7 @@ export function renderCards(products, targetSelector) {
             (p) => `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
             <div id="card" class="card h-100 shadow text-light bg-transparent">
-                <a href="/details.html?id=${p.id}">
+                <a href="/product-details.html?id=${p.id}">
                     <img 
                         src="${p.img}" 
                         class="card-img-top" 
@@ -43,7 +43,7 @@ export function renderCards(products, targetSelector) {
                         Agregar al carrito
                     </button>
 
-                    <a href="/details.html?id=${
+                    <a href="/product-details.html?id=${
                         p.id
                     }" class="btn btn-outline-info">
                         Ver detalle
