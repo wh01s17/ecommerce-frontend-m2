@@ -8,7 +8,7 @@ export function renderCards(products, targetSelector) {
         .map(
             (p) => `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div id="card" class="card h-100 shadow-sm border-0">
+            <div id="card" class="card h-100 shadow text-light bg-transparent">
                 <a href="/details.html?id=${p.id}">
                     <img 
                         src="${p.img}" 
@@ -21,7 +21,7 @@ export function renderCards(products, targetSelector) {
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${p.name}</h5>
 
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text small flex-grow-1">
                         ${p.description}
                     </p>
 
@@ -29,19 +29,21 @@ export function renderCards(products, targetSelector) {
                         $${p.price.toLocaleString("es-CL")}
                     </p>
 
-                    <span class="badge text-start text-dark mb-3">
+                    <span class="badge text-start text-light mb-3">
                         ⭐ ${p.rating}
                     </span>
 
                     <button 
-                        class="btn btn-success w-100 mb-2 add-to-cart" 
+                        class="btn btn-primary w-100 mb-2 add-to-cart" 
                         data-id="${p.id}"
                     >
                     <i class="fa-solid fa-cart-plus"></i>
                         Agregar al carrito
                     </button>
 
-                    <a href="/details.html?id=${p.id}" class="btn btn-primary">
+                    <a href="/details.html?id=${
+                        p.id
+                    }" class="btn btn-outline-info">
                         Ver detalle
                     </a>
                 </div>

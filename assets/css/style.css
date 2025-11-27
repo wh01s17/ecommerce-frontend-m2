@@ -46,9 +46,36 @@ body {
 
 #cart-details {
     margin-top: 100px;
-    min-height: calc(100dvh - 510px);
+    min-height: 50dvh;
+}
+
+#cart-details img {
+    width: 80px;
+}
+
+#cart-empty {
+    min-height: 50vh;
 }
 
 #wh01s17-link {
     text-decoration: none;
+}
+
+.gradient {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+
+    animation: gradientShift 10s ease infinite;
+    color: white;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

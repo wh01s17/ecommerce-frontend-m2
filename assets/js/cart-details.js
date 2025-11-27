@@ -14,9 +14,13 @@ function renderCart() {
 
     if (cartItems.length === 0) {
         container.innerHTML = `
-            <div class="container">
-                <div class="alert alert-info text-center">
-                    Tu carrito está vacío.
+            <div id="cart-empty" class="container d-flex align-items-center justify-content-center">
+g                    Tu carrito está vacío.
+                    <br />
+                    <br />
+                    <a href="/products.html" class="btn btn-primary">
+                        Ir a productos
+                    </a>
                 </div>
             </div>
         `;
@@ -35,38 +39,56 @@ function renderCart() {
                 ${cartItems
                     .map(
                         (item) => `
-                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
                         <div class="d-flex align-items-center gap-3">
-                            <img src="${item.img}" alt="${
-                            item.name
-                        }" class="img-thumbnail" style="width: 80px;">
+                            <a href="/details.html?id=${item.id}">
+                                <img 
+                                    src="${item.img}" 
+                                    alt="${item.name}" 
+                                    class="img-thumbnail"
+                                >
+                            </a>
+                            
                             <div>
-                                <h5 class="mb-1">${item.name}</h5>
-                                <p class="mb-0 text-muted">Precio unitario: $${item.price.toLocaleString(
+                                <a href="/details.html?id=${item.id}">
+                                    <h5 class="mb-1">
+                                        ${item.name}
+                                    </h5>
+                                </a>
+                                
+                                <p class="mb-0">
+                                Precio unitario: $${item.price.toLocaleString(
                                     "es-CL"
-                                )}</p>
+                                )}
+                                </p>
                                 <div class="d-flex align-items-center gap-2 mt-2">
                                     <button class="btn btn-sm btn-outline-secondary" onclick="decreaseQuantity(${
                                         item.id
                                     })">
                                         <i class="fa-solid fa-minus"></i>
                                     </button>
-                                    <span class="fw-bold">${item.qty}</span>
-                                    <button class="btn btn-sm btn-outline-secondary" onclick="increaseQuantity(${
-                                        item.id
-                                    })">
+                                    <span class="fw-bold">
+                                        ${item.qty}
+                                    </span>
+                                    <button 
+                                        class="btn btn-sm btn-outline-secondary" 
+                                        onclick="increaseQuantity(${item.id})"
+                                    >
                                         <i class="fa-solid fa-plus"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <div class="text-end">
-                            <p class="mb-2 fw-bold">$${(
-                                item.price * item.qty
-                            ).toLocaleString("es-CL")}</p>
-                            <button class="btn btn-sm btn-danger" onclick="removeFromCart(${
-                                item.id
-                            })">
+                            <p class="mb-2 fw-bold">
+                                $${(item.price * item.qty).toLocaleString(
+                                    "es-CL"
+                                )}
+                            </p>
+                            <button 
+                                class="btn btn-sm btn-danger" 
+                                onclick="removeFromCart(${item.id})"
+                            >
                                 <i class="fa-solid fa-trash"></i>
                             </button>
                         </div>
@@ -76,8 +98,12 @@ function renderCart() {
                     .join("")}
             </div>
             <div class="mt-4 text-end">
-                <h4>Total: $${total.toLocaleString("es-CL")}</h4>
-                <a href="checkout.html" class="btn btn-success mt-2">Proceder al pago</a>
+                <h4>
+                    Total: $${total.toLocaleString("es-CL")}
+                </h4>
+                <a href="checkout.html" class="btn btn-success mt-2">
+                    Proceder al pago
+                </a>
             </div>
         </div>
     `;

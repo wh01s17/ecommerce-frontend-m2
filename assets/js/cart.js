@@ -15,6 +15,7 @@ export function saveCart(cart) {
 }
 
 export function addToCart(product) {
+    console.log(product);
     const cart = getCart();
 
     const index = cart.findIndex((item) => item.id === product.id);
