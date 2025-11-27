@@ -158,4 +158,4 @@ https://github.com/wh01s17/ecommerce-frontend-m2
 
 ## 6. Autor
 
-Solución preparada para acompañar y guiar el desarrollo del proyecto de los estudiantes del Módulo 2 – Frontend.
+Solución preparada para acompañar y guiar el desarrollo del proyecto de los estudiantes del Módulo 2 - Frontend.
