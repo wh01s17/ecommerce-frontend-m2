@@ -39,4 +39,40 @@ export function addToCart(product) {
     updateCartCount();
 }
 
+export function removeItemFromCart(id) {
+    const cart = getCart();
+    const index = cart.findIndex((item) => item.id === id);
+
+    if (index !== -1) {
+        if (cart[index].qty > 1) {
+            cart[index].qty -= 1;
+        } else {
+            cart.splice(index, 1);
+        }
+        saveCart(cart);
+        updateCartCount();
+    }
+}
+
+export function addItemToCart(id) {
+    const cart = getCart();
+    const index = cart.findIndex((item) => item.id === id);
+
+    if (index !== -1) {
+        if (cart[index].qty < cart[index].stock) {
+            cart[index].qty += 1;
+            saveCart(cart);
+            updateCartCount();
+        } else {
+            alert("No hay más stock disponible de este producto");
+        }
+    }
+}
+
+export function removeFromCart(id) {
+    const cart = getCart().filter((item) => item.id !== id);
+    saveCart(cart);
+    updateCartCount();
+}
+
 updateCartCount();

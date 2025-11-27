@@ -1,5 +1,5 @@
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .carousel-item {
@@ -42,6 +42,11 @@ body {
 
 #cart-icon {
     width: 24px;
+}
+
+#cart-details {
+    margin-top: 100px;
+    min-height: calc(100dvh - 510px);
 }
 
 #wh01s17-link {
