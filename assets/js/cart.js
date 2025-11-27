@@ -76,4 +76,9 @@ export function removeFromCart(id) {
     updateCartCount();
 }
 
+export function clearCart() {
+    saveCart([]);
+    updateCartCount();
+}
+
 updateCartCount();

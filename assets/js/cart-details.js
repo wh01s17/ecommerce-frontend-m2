@@ -4,6 +4,7 @@ import {
     updateCartCount,
     removeItemFromCart,
     addItemToCart,
+    clearCart,
 } from "./cart.js";
 
 const container = document.getElementById("cart-details");
@@ -102,9 +103,9 @@ function renderCart() {
                 <h4>
                     Total: $${total.toLocaleString("es-CL")}
                 </h4>
-                <a href="checkout.html" class="btn btn-success mt-2">
+                <button onclick="checkout()" class="btn btn-success mt-2">
                     Proceder al pago
-                </a>
+                </button>
             </div>
         </div>
     `;
@@ -126,8 +127,15 @@ function removeFromCart(id) {
     renderCart();
 }
 
+function checkout() {
+    clearCart();
+    alert("Gracias por su compra!");
+    window.location.href = "/";
+}
+
 window.decreaseQuantity = decreaseQuantity;
 window.increaseQuantity = increaseQuantity;
 window.removeFromCart = removeFromCart;
+window.checkout = checkout;
 
 renderCart();
