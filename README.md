@@ -16,17 +16,28 @@ ecommerce-frontend-m2
 │   │   └── style.css
 │   ├── img
 │   │   ├── products
+│   │   │   ├── fender_coronado_ii_1966.webp
+│   │   │   ├── fender_duo_sonic_1956.webp
+│   │   │   ├── fender_esquire_1954.webp
 │   │   │   ├── fender_jaguar_1965.webp
 │   │   │   ├── fender_jazzmaster_1962.webp
+│   │   │   ├── fender_lead_ii_1979.webp
 │   │   │   ├── fender_mustang_1964.webp
+│   │   │   ├── fender_starcaster_1976.webp
 │   │   │   ├── fender_stratocaster_1965.webp
 │   │   │   ├── fender_telecaster_1972_custom.webp
 │   │   │   ├── gibson_es-335_1961.webp
 │   │   │   ├── gibson_explorer_1976.webp
 │   │   │   ├── gibson_firebird_v_1963.webp
+│   │   │   ├── gibson_flying_v_1975.webp
+│   │   │   ├── gibson_l6-s_1973.webp
 │   │   │   ├── gibson_les_paul_standard_1959.webp
+│   │   │   ├── gibson_marauder_1975.webp
+│   │   │   ├── gibson_melody_maker_1964.webp
+│   │   │   ├── gibson_rd_artist_1978.webp
 │   │   │   └── gibson_sg_special_1968.webp
 │   │   └── ui
+│   │       ├── favicon.png
 │   │       ├── img_01.webp
 │   │       ├── img_02.webp
 │   │       └── img_03.webp
