@@ -32,6 +32,7 @@ ecommerce-frontend-m2
 │   │       └── img_03.webp
 │   └── js
 │       ├── best-sellers.js
+│       ├── cart-details.js
 │       ├── cart.js
 │       ├── data.js
 │       ├── details.js
