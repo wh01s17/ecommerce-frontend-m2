@@ -151,14 +151,81 @@ La grilla del Home usa breakpoints de Bootstrap para adaptarse a distintos tama�
 
 ---
 
-## 4. Cómo ejecutar la solución
+## 4. ⚠️ Cómo ejecutar el proyecto de manera local (IMPORTANTE)
 
-1. Descargar o clonar el repositorio.
-2. Abrir `index.html` en el navegador.
-3. Navegar entre Home → Detalle → Carrito.
-4. Probar la interacción agregando productos.
+El proyecto no funciona si abres index.html directamente desde tu PC (ruta `file://`).
+Esto se debe a que el navbar y el footer se cargan mediante `fetch()` desde archivos externos:
 
-No requiere servidor ni dependencias adicionales.
+```javascript
+import { updateCartCount } from "./cart.js";
+
+fetch("../../navbar.html")
+    .then((res) => res.text())
+    .then((html) => {
+        document.getElementById("navbar").innerHTML = html;
+        updateCartCount();
+    });
+```
+
+Los navegadores bloquean `fetch()` cuando se usa sin servidor.
+
+**Para que todo funcione, debes levantar un servidor local**
+
+Puedes usar cualquiera de estas opciones:
+
+### Opción 1: Usar VSCode con Live Server
+
+1. Instala la extensión **Live Server** en VSCode.
+2. Abre la carpeta del proyecto.
+3. Haz clic derecho en `index.html` → **Open with Live Server**.
+4. El proyecto se abrirá en `http://127.0.0.1:5500`.
+
+### Opción 2: Usar un servidor local con Python
+
+Si tienes Python instalado:
+
+```bash
+python3 -m http.server 8000
+```
+
+Luego abre en tu navegador:
+
+```bash
+http://localhost:8000
+```
+
+### Opción 3: Usar Node.js (http-server)
+
+Si tienes Node instalado:
+
+```
+npm install -g http-server
+http-server .
+```
+
+Esto abrirá el proyecto desde:
+
+```bash
+http://localhost:8080
+```
+
+Esto abrirá el proyecto desde:
+
+http://localhost:8080
+
+## **Importante**
+
+El uso de un servidor local asegura que rutas como:
+
+```javascript
+fetch("../../footer.html")
+    .then((res) => res.text())
+    .then((html) => {
+        document.getElementById("footer").innerHTML = html;
+    });
+```
+
+funcionen correctamente tanto en tu PC como en otros equipos al ejecutar el proyecto de forma local.
 
 ---
 
@@ -171,3 +238,7 @@ https://github.com/wh01s17/ecommerce-frontend-m2
 ## 6. Autor
 
 Solución preparada para acompañar y guiar el desarrollo del proyecto de los estudiantes del Módulo 2 - Frontend.
+
+```
+
+```
